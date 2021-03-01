@@ -49,7 +49,7 @@ console.log(avg({
 function maxProduct(nums) {
     let maxResult = 0;
     for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length - i + 1; j++) {
+        for (let j = i + 1; j < nums.length; j++) {
             currentProduct = nums[i] * nums[j];
             if (maxResult < currentProduct) {
                 maxResult = currentProduct;
@@ -66,7 +66,7 @@ console.log(maxProduct([10, -20, 0, 3])); // 得到 30 因為 10 和 3 相乘得
 
 function twoSum(nums, target) {
     for (let i = 0; i < nums.length; i++) {
-        for (let j = i + 1; j < nums.length - i + 1; j++) {
+        for (let j = i + 1; j < nums.length; j++) {
             if (nums[i] + nums[j] === target) {
                 return [i, j]
             }
@@ -99,4 +99,4 @@ function maxZeros(nums) {
 
 console.log(maxZeros([0, 1, 0, 0])); // 得到 2
 console.log(maxZeros([1, 0, 0, 0, 0, 1, 0, 1, 0, 0])); // 得到 4
-console.log(maxZeros([1, 1, 1, 1, 1])); // 得到 0
+console.log(maxZeros([1, 1, 1, 1, 1])) // 得到 0
