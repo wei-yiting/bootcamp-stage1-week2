@@ -44,7 +44,7 @@ print(avg({
 # --------------------- problem 3 ------------------------
 
 def maxProduct(nums):
-    max_result = 0
+    max_result = nums[0] * nums[1]  # *** 起始值的設定為第一筆乘出來結果更為正確 ***
     for i in range(len(nums)):
         for j in range(i + 1, len(nums)):
             current_product = nums[i] * nums[j]
@@ -55,9 +55,10 @@ def maxProduct(nums):
 
 print(maxProduct([5, 20, 2, 6]))  # 得到 120 因為 20 和 6 相乘得到最大值
 print(maxProduct([10, -20, 0, 3]))  # 得到 30 因為 10 和 3 相乘得到最大值
-
+print(maxProduct([1, -10]))  # *** 沒考慮到的邊界條件 ***
 
 # --------------------- problem 4 ------------------------
+
 
 def twoSum(nums, target):
     for i in range(len(nums)):

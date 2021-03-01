@@ -47,7 +47,7 @@ console.log(avg({
 // ---------------- problem 3 --------------------
 
 function maxProduct(nums) {
-    let maxResult = 0;
+    let maxResult = nums[0] * nums[1];
     for (let i = 0; i < nums.length; i++) {
         for (let j = i + 1; j < nums.length; j++) {
             currentProduct = nums[i] * nums[j];
